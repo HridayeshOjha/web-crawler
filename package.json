@@ -19,5 +19,8 @@
   "homepage": "https://github.com/HridayeshOjha/web-crawler#readme",
   "devDependencies": {
     "jest": "^30.3.0"
+  },
+  "dependencies": {
+    "jsdom": "^21.1.2"
   }
 }
