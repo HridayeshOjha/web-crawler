@@ -1,6 +1,7 @@
 const {crawlPage} = require(`./crawl`)
+const {printReport} = require('./report')
 
-function main(){
+async function main(){
     if(process.argv.length<3){
         console.log("no webiste provided");
         process.exit(1);
@@ -15,7 +16,9 @@ function main(){
     
     console.log(`starting crawl of ${baseURL}`);
 
-    crawlPage(baseURL);
+    const pages= await crawlPage(baseURL,baseURL, {});
+    
+    printReport(pages);
 }
 
 main()
